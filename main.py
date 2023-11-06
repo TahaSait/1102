@@ -1,8 +1,8 @@
-numbers = open("three_digit_numbers.txt")
+numbers = open("three_digit_numbers.txt", "r")
+sorted_nums = open("sorted_numbers.txt", "w")
 num = numbers.read()
 nums = num.split()
-sort_nums = sorted(nums)
-print(sort_nums)
-
-
+sort_nums = str(sorted(nums))
+sorted_nums.write(sort_nums)
 numbers.close()
+sorted_nums.close()
